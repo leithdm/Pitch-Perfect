@@ -18,16 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcP-Z5-NXI">
-                                <rect key="frame" x="250" y="250" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="xSE-nu-8HW"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="microphone-iphone"/>
-                                <connections>
-                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dSx-oP-46U"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6o-qp-L4N">
                                 <rect key="frame" x="275" y="530" width="50" height="50"/>
                                 <constraints>
@@ -51,6 +41,16 @@
                                 <color key="shadowColor" red="0.68888300657272339" green="0.71366006135940552" blue="0.73448425531387329" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcP-Z5-NXI">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="xSE-nu-8HW"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="microphone-iphone"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dSx-oP-46U"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9212072491645813" green="0.84832113981246948" blue="0.62377804517745972" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -97,17 +97,6 @@
                                     <action selector="playSlowly:" destination="uT3-Mb-mSU" eventType="touchUpInside" id="kgC-wK-tw9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcP-P0-8m3">
-                                <rect key="frame" x="20" y="237" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Yiq-H1-p0M"/>
-                                    <constraint firstAttribute="height" constant="100" id="qhp-jJ-nW2"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="chipmunk@2x-iphone"/>
-                                <connections>
-                                    <action selector="playChipMunk:" destination="uT3-Mb-mSU" eventType="touchUpInside" id="BG7-bz-c9c"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AG2-C0-U6K">
                                 <rect key="frame" x="480" y="237" width="100" height="100"/>
                                 <constraints>
@@ -139,6 +128,17 @@
                                 <state key="normal" title="Button" image="fast@2x-iphone"/>
                                 <connections>
                                     <action selector="playFast:" destination="uT3-Mb-mSU" eventType="touchUpInside" id="Dkn-ze-Rqr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcP-P0-8m3">
+                                <rect key="frame" x="20" y="237" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Yiq-H1-p0M"/>
+                                    <constraint firstAttribute="height" constant="100" id="qhp-jJ-nW2"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="chipmunk@2x-iphone"/>
+                                <connections>
+                                    <action selector="playChipMunk:" destination="uT3-Mb-mSU" eventType="touchUpInside" id="BG7-bz-c9c"/>
                                 </connections>
                             </button>
                         </subviews>

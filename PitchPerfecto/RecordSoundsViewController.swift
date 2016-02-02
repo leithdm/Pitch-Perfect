@@ -33,10 +33,10 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     recordingProgress.hidden = false
     recordingProgress.text = "Tap Icon To Record"
     recordingProgress.textColor = UIColor.whiteColor()
-    
     loadAnimations()
   }
   
+  //MARK: - loadAnimations
   func loadAnimations() {
     //Moving elements off-screen prior to being shown
     recordingProgress.center.x += view.bounds.width
