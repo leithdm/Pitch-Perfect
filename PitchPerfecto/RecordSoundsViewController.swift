@@ -45,11 +45,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
       self.recordingProgress.center.x -= self.view.bounds.width
       }, completion: nil)
   }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
 
   //MARK: recordAudio
   @IBAction func recordAudio(sender: UIButton) {

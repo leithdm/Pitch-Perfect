@@ -28,42 +28,31 @@ class PlaySoundsViewController: UIViewController {
       audioPlayer = try! AVAudioPlayer(contentsOfURL: recordedAudio.filePathUrl)
       audioPlayer.enableRate = true
     }
-
   }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
   
   //MARK: - playSound
   func playSound(rate: Float, currentTime: Double) {
     audioPlayer.rate = rate
     audioPlayer.currentTime = currentTime
     audioPlayer.play()
-    
   }
   
   //MARK: - playSlowly
   @IBAction func playSlowly(sender: UIButton) {
-    audioEngine.stop()
-    audioEngine.reset()
+    stopAudio()
     playSound(0.5, currentTime: 0.0)
   }
   
   //MARK: - playFast
   @IBAction func playFast(sender: UIButton) {
-    audioEngine.stop()
-    audioEngine.reset()
+    stopAudio()
     playSound(1.5, currentTime: 0.0)
   }
   
   //MARK: - playVariablePitch
   func playAudioWithVariablePitch(pitch: Float) {
+    stopAudio()
     audioPlayer.stop()
-    audioEngine.stop()
-    audioEngine.reset()
     
     let audioPlayerNode = AVAudioPlayerNode()
     audioEngine.attachNode(audioPlayerNode)
@@ -80,6 +69,12 @@ class PlaySoundsViewController: UIViewController {
     audioPlayerNode.play()
   }
   
+  //MARK: - stopAudio
+  func stopAudio() {
+    audioEngine.stop()
+    audioEngine.reset()
+  }
+  
   //MARK: - playChipmunk
   @IBAction func playChipMunk(sender: UIButton) {
     playAudioWithVariablePitch(1000)
@@ -90,7 +85,7 @@ class PlaySoundsViewController: UIViewController {
     playAudioWithVariablePitch(-800)
   }
   
-  //MARK: - stop
+  //MARK: - stop audioPlayer
   @IBAction func stop(sender: UIButton) {
     audioPlayer.stop()
   }
